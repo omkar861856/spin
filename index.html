@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecotron Spin | Interactive Picker Wheel</title>
-    <meta name="description" content="Make decisions easily with the premium Ecotron Spin wheel. Enter names, spin, and let fate decide.">
+    <title>Ecotron Spin | Interactive Picker Wheel - Premium Alternative to Wheel of Names</title>
+    <meta name="description" content="Make decisions easily with the premium Ecotron Spin wheel. Enter names, spin, and let fate decide. The best free alternative to Wheel of Names for giveaways and games.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- SEO: JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Ecotron Spin",
+      "operatingSystem": "All",
+      "applicationCategory": "UtilityApplication",
+      "description": "An interactive picker wheel for random selections and giveaways.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Top Horizontal Banner -->
@@ -48,9 +65,25 @@ Choice 3
 Choice 4</textarea>
                     <button onclick="updateWheel()" class="action-btn">Update Wheel</button>
                 </div>
+
+                <!-- SEO Content -->
+                <article style="text-align: left; margin-top: 3rem; color: #94a3b8; font-size: 0.9rem; line-height: 1.6; grid-column: span 2;">
+                    <h3 style="color: var(--text); margin-bottom: 1rem;">Free Online Picker Wheel</h3>
+                    <p>Ecotron Spin is a highly interactive, browser-based picker wheel designed for giveaways, classroom decisions, and fun games. It is a completely free alternative to other picker tools, offering a premium dark-mode aesthetic with zero intrusive popups. Simply enter your list and spin to get a random result instantly.</p>
+                </article>
             </main>
 
             <footer>
+                <div style="margin: 2rem 0; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <p style="margin-bottom: 10px; font-weight: 600;">Try our other tools:</p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; font-size: 0.8rem;">
+                        <a href="https://time.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Time</a>
+                        <a href="https://opti.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Opti</a>
+                        <a href="https://lexi.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Lexi</a>
+                        <a href="https://whisper.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Whisper</a>
+                        <a href="https://sleep.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Sleep</a>
+                    </div>
+                </div>
                 <p>&copy; 2026 Ecotron Infrastructure</p>
             </footer>
         </div>
