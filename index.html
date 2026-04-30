@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecotron Spin | Interactive Random Picker</title>
+    <meta name="description" content="Spin the wheel to pick a random name or item. Perfect for contests, games, and decisions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ecotron Spin</h1>
+            <p>Enter names and let fate decide.</p>
+        </header>
+
+        <main>
+            <div class="wheel-container">
+                <canvas id="wheel" width="400" height="400"></canvas>
+                <div class="pointer">▼</div>
+                <button onclick="spin()" class="spin-btn">SPIN</button>
+            </div>
+
+            <div class="input-section">
+                <textarea id="names-input" placeholder="Enter names (one per line)..." class="premium-textarea">Choice 1
+Choice 2
+Choice 3
+Choice 4</textarea>
+                <button onclick="updateWheel()" class="action-btn">Update Wheel</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Ecotron Infrastructure</p>
+        </footer>
+    </div>
+
+    <!-- Win Modal -->
+    <div id="win-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>We have a winner!</h2>
+            <div id="winner-name" class="winner"></div>
+            <button onclick="closeModal()" class="action-btn">Awesome!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

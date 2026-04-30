@@ -1,0 +1,18 @@
+services:
+  ecotron-spin:
+    build: .
+    container_name: ecotron-spin
+    restart: unless-stopped
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.ecotron-spin.rule=Host(`spin.ecotron.co.in`)"
+      - "traefik.http.routers.ecotron-spin.entrypoints=websecure"
+      - "traefik.http.routers.ecotron-spin.tls.certresolver=myresolver"
+      - "traefik.http.services.ecotron-spin.loadbalancer.server.port=80"
+
+networks:
+  traefik:
+    external: true
