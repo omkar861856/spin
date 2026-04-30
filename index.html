@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecotron Spin | Interactive Random Picker</title>
-    <meta name="description" content="Spin the wheel to pick a random name or item. Perfect for contests, games, and decisions.">
+    <title>Ecotron Spin | Interactive Picker Wheel</title>
+    <meta name="description" content="Make decisions easily with the premium Ecotron Spin wheel. Enter names, spin, and let fate decide.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top Leaderboard -->
-    <div class="top-ad">
+    <!-- Top Horizontal Banner -->
+    <div class="ad-top">
         <script type="text/javascript">
             atOptions = { 'key' : 'd16e77598eaf5f7d6ff540320c482315', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
         </script>
@@ -20,20 +20,20 @@
     </div>
 
     <div class="page-wrapper">
-        <!-- Left Skyscraper -->
-        <div class="side-ad">
+        <!-- Left Vertical Skyscraper -->
+        <div class="ad-side">
             <script type="text/javascript">
                 atOptions = { 'key' : 'c47bbd7b7eaf753710995d34420e752a', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
             </script>
             <script type="text/javascript" src="//www.highperformanceformat.com/c47bbd7b7eaf753710995d34420e752a/invoke.js"></script>
         </div>
 
-        <div class="container">
+        <div class="main-container">
             <header>
                 <h1>Ecotron Spin</h1>
                 <p>Enter names and let fate decide.</p>
                 
-                <!-- Small Banner -->
+                <!-- Small Internal Banner -->
                 <div style="margin-top: 15px;">
                     <script type="text/javascript">
                         atOptions = { 'key' : 'b6223509fab1c077bd2e39c980b29b7a', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
@@ -42,7 +42,7 @@
                 </div>
             </header>
 
-            <main>
+            <main style="display: contents;">
                 <div class="wheel-container">
                     <canvas id="wheel" width="400" height="400"></canvas>
                     <div class="pointer">▼</div>
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="input-section">
-                    <!-- Rectangle Ad -->
+                    <!-- Rectangle Internal Ad -->
                     <div style="margin-bottom: 20px;">
                         <script type="text/javascript">
                             atOptions = { 'key' : 'a9c767985c9e5eb3e9d263af2f1c372c', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
@@ -64,12 +64,6 @@ Choice 3
 Choice 4</textarea>
                     <button onclick="updateWheel()" class="action-btn">Update Wheel</button>
                 </div>
-
-                <!-- Native Banner -->
-                <div class="ad-container" style="margin-top: 3rem; grid-column: span 2;">
-                    <script async="async" data-cfasync="false" src="https://developdomicile.com/171e6e6e772e669f62e0a342adaf2ded/invoke.js"></script>
-                    <div id="container-171e6e6e772e669f62e0a342adaf2ded"></div>
-                </div>
             </main>
 
             <footer>
@@ -77,8 +71,8 @@ Choice 4</textarea>
             </footer>
         </div>
 
-        <!-- Right Skyscraper -->
-        <div class="side-ad">
+        <!-- Right Vertical Skyscraper -->
+        <div class="ad-side">
             <script type="text/javascript">
                 atOptions = { 'key' : '45cfa516abbe59ce8138071b08ef6a0b', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
             </script>
@@ -93,11 +87,17 @@ Choice 4</textarea>
         </div>
     </div>
 
+    <!-- Bottom Native Banner -->
+    <div class="ad-bottom">
+        <script async="async" data-cfasync="false" src="https://developdomicile.com/171e6e6e772e669f62e0a342adaf2ded/invoke.js"></script>
+        <div id="container-171e6e6e772e669f62e0a342adaf2ded"></div>
+    </div>
+
     <!-- Win Modal -->
-    <div id="win-modal" class="modal hidden">
+    <div id="win-modal" class="modal">
         <div class="modal-content">
-            <h2>We have a winner!</h2>
-            <div id="winner-name" class="winner"></div>
+            <h3>And the winner is...</h3>
+            <div id="winner-text"></div>
             <button onclick="closeModal()" class="action-btn">Awesome!</button>
         </div>
     </div>
